@@ -1,0 +1,45 @@
+<div class="row my-3">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card">
+
+        <div class="card-body">
+
+          <div class="form-group">
+            <label for="">Search By Name</label>
+            <input (keyup)="onSearchTxt()" [(ngModel)]="searchTxt" class="form-control" placeholder="Searching By Name">
+          </div>
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>birth_year</th>
+                <th>gender</th>
+                <th>eye_color</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let people of peoples">
+                <td>{{people.name}}</td>
+                <td>{{people.birth_year}}</td>
+                <td>{{people.gender}}</td>
+                <td>{{people.eye_color}}</td>
+                <td>
+                  <button class="btn btn-sm btn-primary">Detail</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
